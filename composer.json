@@ -1,0 +1,56 @@
+{
+  "name": "codicastudio/seo-tools",
+  "description": "A noobs worthless garbage, just learning.",
+  "keywords": [
+      "worthless garabage by a noob."
+  ],
+  "homepage": "https://github.com/codicastudio/seo-tools",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Michael J Brown",
+          "email": "codicastudiodev@gmail.com",
+          "homepage": "https://codicastudio.dev",
+          "role": "Developer"
+      }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*",
+    "illuminate/config": "^7.0",
+    "illuminate/support": "^7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.0",
+    "phpspec/phpspec": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "codicastudio\\SEOTools\\": "src/SEOTools/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "codicastudio\\SEOTools\\Tests\\": "tests/SEOTools"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "codicastudio\\SEOTools\\Providers\\SEOToolsServiceProvider"
+      ],
+      "aliases": {
+        "SEOMeta": "codicastudio\\SEOTools\\Facades\\SEOMeta",
+        "OpenGraph": "codicastudio\\SEOTools\\Facades\\OpenGraph",
+        "Twitter": "codicastudio\\SEOTools\\Facades\\TwitterCard",
+        "JsonLd": "codicastudio\\SEOTools\\Facades\\JsonLd",
+        "SEO": "codicastudio\\SEOTools\\Facades\\SEOTools"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
